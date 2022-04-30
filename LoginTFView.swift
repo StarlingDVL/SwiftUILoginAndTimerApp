@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  LoginTFView.swift
 //  SwiftUILoginAndTimerApp
 //
 //  Created by Юрий Скворцов on 30.04.2022.
@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginTFView: View {
     @State private var login = ""
+    private var isValidate = false
     
     var body: some View {
         VStack {
@@ -17,20 +18,19 @@ struct LoginView: View {
                     .multilineTextAlignment(.center)
                 Text("\(login.count)")
                     .padding(.leading, -40)
-                    .foregroundColor(login.count > 2 ? .green : .red)
+                    .foregroundColor(isValidate ? .green : .red)
             }
             Button(action: {}) {
                 Image(systemName: "checkmark.circle")
                 Text("OK")
             }
-            .disabled(login.count <= 2)
+            .disabled(!isValidate)
         }
-        .padding()
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct LoginTFView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginTFView()
     }
 }
