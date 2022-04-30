@@ -10,6 +10,10 @@ import SwiftUI
 struct LoginView: View {
     @State private var login = ""
     
+    var isValidate: Bool {
+        login.count > 2
+    }
+    
     var body: some View {
         VStack {
             HStack(spacing: 50) {
@@ -17,13 +21,13 @@ struct LoginView: View {
                     .multilineTextAlignment(.center)
                 Text("\(login.count)")
                     .padding(.leading, -40)
-                    .foregroundColor(login.count > 2 ? .green : .red)
+                    .foregroundColor(isValidate ? .green : .red)
             }
             Button(action: {}) {
                 Image(systemName: "checkmark.circle")
                 Text("OK")
             }
-            .disabled(login.count <= 2)
+            .disabled(!isValidate)
         }
         .padding()
     }
