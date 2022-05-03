@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     @State private var login = ""
     
     var isValidate: Bool {
