@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUILoginAndTimerAppApp: App {
+    private let user = StorageManager.shared.uploadUser()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StarterView()
+                .environmentObject(UserManager(user: user))
         }
     }
 }

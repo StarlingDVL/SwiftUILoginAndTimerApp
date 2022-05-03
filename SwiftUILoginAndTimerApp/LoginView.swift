@@ -9,22 +9,22 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State private var login = ""
+    @EnvironmentObject private var userManager: UserManager
     
     var isValidate: Bool {
-        login.count > 2
+        userManager.user.name.count > 2
     }
     
     var body: some View {
         VStack {
             HStack(spacing: 50) {
-                TextField("Enter your name...", text: $login)
+                TextField("Enter your name...", text: $userManager.user.name)
                     .multilineTextAlignment(.center)
-                Text("\(login.count)")
+                Text("\(userManager.user.name.count)")
                     .padding(.leading, -40)
                     .foregroundColor(isValidate ? .green : .red)
             }
-            Button(action: {}) {
+            Button(action: { registerUser() }) {
                 Image(systemName: "checkmark.circle")
                 Text("OK")
             }
@@ -32,10 +32,18 @@ struct LoginView: View {
         }
         .padding()
     }
+    
+    private func registerUser() {
+        if !userManager.user.name.isEmpty {
+            userManager.user.isRegistered.toggle()
+            StorageManager.shared.save(user: userManager.user)
+        }
+    }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+            .environmentObject(UserManager())
     }
 }

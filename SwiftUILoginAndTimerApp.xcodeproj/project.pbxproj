@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2BD4AC962821434A00395288 /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4AC952821434A00395288 /* TimeCounter.swift */; };
+		2BD4AC982821506100395288 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4AC972821506100395288 /* UserManager.swift */; };
+		2BD4AC9A2821573000395288 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4AC992821573000395288 /* StarterView.swift */; };
+		2BD4AC9C2821608300395288 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4AC9B2821608300395288 /* User.swift */; };
+		2BD4AC9E2821617900395288 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4AC9D2821617900395288 /* StorageManager.swift */; };
 		2BDD86D4281D38B10037C013 /* SwiftUILoginAndTimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD86D3281D38B10037C013 /* SwiftUILoginAndTimerAppApp.swift */; };
 		2BDD86D6281D38B10037C013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD86D5281D38B10037C013 /* ContentView.swift */; };
 		2BDD86D8281D38B30037C013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDD86D7281D38B30037C013 /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		2BD4AC952821434A00395288 /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
+		2BD4AC972821506100395288 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		2BD4AC992821573000395288 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
+		2BD4AC9B2821608300395288 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2BD4AC9D2821617900395288 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		2BDD86D0281D38B10037C013 /* SwiftUILoginAndTimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILoginAndTimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDD86D3281D38B10037C013 /* SwiftUILoginAndTimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILoginAndTimerAppApp.swift; sourceTree = "<group>"; };
 		2BDD86D5281D38B10037C013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,9 +64,13 @@
 			isa = PBXGroup;
 			children = (
 				2BDD86D3281D38B10037C013 /* SwiftUILoginAndTimerAppApp.swift */,
-				2BDD86D5281D38B10037C013 /* ContentView.swift */,
-				2BD4AC952821434A00395288 /* TimeCounter.swift */,
+				2BD4AC992821573000395288 /* StarterView.swift */,
 				2BDD86E1281D38EC0037C013 /* LoginView.swift */,
+				2BDD86D5281D38B10037C013 /* ContentView.swift */,
+				2BD4AC972821506100395288 /* UserManager.swift */,
+				2BD4AC9D2821617900395288 /* StorageManager.swift */,
+				2BD4AC952821434A00395288 /* TimeCounter.swift */,
+				2BD4AC9B2821608300395288 /* User.swift */,
 				2BDD86D7281D38B30037C013 /* Assets.xcassets */,
 				2BDD86D9281D38B30037C013 /* Preview Content */,
 			);
@@ -145,8 +157,12 @@
 			files = (
 				2BDD86E2281D38EC0037C013 /* LoginView.swift in Sources */,
 				2BDD86D6281D38B10037C013 /* ContentView.swift in Sources */,
+				2BD4AC9A2821573000395288 /* StarterView.swift in Sources */,
 				2BDD86D4281D38B10037C013 /* SwiftUILoginAndTimerAppApp.swift in Sources */,
+				2BD4AC982821506100395288 /* UserManager.swift in Sources */,
 				2BD4AC962821434A00395288 /* TimeCounter.swift in Sources */,
+				2BD4AC9C2821608300395288 /* User.swift in Sources */,
+				2BD4AC9E2821617900395288 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +299,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +309,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,6 +329,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,7 +339,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
